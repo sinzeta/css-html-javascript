@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  color: red;
+  font-size: 50px;
+}
+
+h2 {
+  color: blue;
+  font-size: 100px;
+}
+</style>
+
+<script>
+function myFunction() {
+  var s = document.styleSheets[0].rules[1].style;
+  var ruleObj = s.parentRule;
+  document.getElementById("demo").innerHTML = ruleObj.cssText;
+  console.log(s)
+}
+</script> 
+</head>
+<body>
+
+<h1>The parentRule Property</h1>
+
+<p>The parentRule property returns a CSSRule Object that represent the CSS rule for the specified style declaration.</p>
+
+<button onclick="myFunction()">Display the CSS Rule</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
